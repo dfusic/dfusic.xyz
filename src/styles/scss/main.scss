@@ -236,6 +236,37 @@ nav{
   }
 }
 
+.active{
+  position: relative!important;
+  color: $highlight!important;
+  &::before{
+    content: '';
+    border-top: 1px solid $highlight;
+    border-right: 1px solid $highlight;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: -2.5px;
+    right: -10px;
+    transform: scale(1) translate(0, 0)!important;
+    opacity: 1!important;
+    transition: all 500ms cubic-bezier(.75,-0.5,0,1.75);
+  }
+  &::after{
+    content: '';
+    border-bottom: 1px solid $highlight;
+    border-left: 1px solid $highlight;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    bottom: -2.5px;
+    left: -10px;
+    transform: scale(1) translate(0, 0)!important;
+    opacity: 1!important;
+    transition: all 500ms cubic-bezier(.75,-0.5,0,1.75);
+  }
+}
+
 @keyframes wave {
   0%{
     transform: rotate(0deg)
@@ -259,6 +290,7 @@ nav{
     transform: scale(1);
   }
 }
+
 
 @media screen and (max-width: 992px){
   .projects__list-single-desc{
