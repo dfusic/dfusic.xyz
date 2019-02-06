@@ -1,25 +1,26 @@
-@import '_vars';
-@import '_fonts';
+@import "_vars";
+@import "_fonts";
 
-html, body{
+html,
+body {
   background-color: $bg;
   font-family: $mainFont;
   font-size: 18px;
 }
-*{
+* {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-::selection{
+::selection {
   background-color: $highlight;
 }
--moz::selection{
+-moz::selection {
   background-color: $highlight;
 }
-nav{
+nav {
   max-width: 80%;
   margin: 50px auto;
-  .navbar{
+  .navbar {
     padding: 0;
     list-style: none;
     display: flex;
@@ -27,15 +28,15 @@ nav{
     justify-content: flex-end;
     flex-direction: row;
     margin: 0;
-    &__item{
+    &__item {
       margin: 0 20px;
-      a{
+      a {
         color: $textColor;
         text-decoration: none;
         position: relative;
         transition: color 400ms ease-in-out;
-        &::before{
-          content: '';
+        &::before {
+          content: "";
           border-top: 1px solid $highlight;
           border-right: 1px solid $highlight;
           width: 10px;
@@ -45,10 +46,10 @@ nav{
           right: -10px;
           transform: scale(0) translate(-15px, 15px);
           opacity: 0;
-          transition: all 500ms cubic-bezier(.75,-0.5,0,1.75);
+          transition: all 500ms cubic-bezier(0.75, -0.5, 0, 1.75);
         }
-        &::after{
-          content: '';
+        &::after {
+          content: "";
           border-bottom: 1px solid $highlight;
           border-left: 1px solid $highlight;
           width: 10px;
@@ -58,12 +59,13 @@ nav{
           left: -10px;
           transform: scale(0) translate(15px, -15px);
           opacity: 0;
-          transition: all 500ms cubic-bezier(.75,-0.5,0,1.75);
+          transition: all 500ms cubic-bezier(0.75, -0.5, 0, 1.75);
         }
-        &:hover{
+        &:hover {
           color: $highlight;
-          &:before, &::after{
-            transform: scale(1) translate(0,0);
+          &:before,
+          &::after {
+            transform: scale(1) translate(0, 0);
             opacity: 1;
           }
         }
@@ -71,36 +73,36 @@ nav{
     }
   }
 }
-.intro{
+.intro {
   max-width: 50%;
   margin: 0 auto;
   padding: 100px 0;
-  &__heading{
+  &__heading {
     display: flex;
     flex-direction: row;
     align-items: center;
-    &-title{
+    &-title {
       color: $textColor;
       font-size: 2em;
     }
-    &-img{
+    &-img {
       width: 45px;
       height: auto;
       margin-left: 15px;
       animation: wave 2000ms infinite;
     }
   }
-  &__para{
-    p{
+  &__para {
+    p {
       line-height: 1.4;
-      color: $textColor!important;
-      span{
+      color: $textColor !important;
+      span {
         font-style: italic;
         padding: 0 5px;
         position: relative;
         z-index: 1;
-        &::before{
-          content: '';
+        &::before {
+          content: "";
           position: absolute;
           left: 0;
           bottom: 0;
@@ -111,21 +113,21 @@ nav{
           transition: height 150ms linear;
           display: block;
         }
-        &:hover{
-          &::before{
+        &:hover {
+          &::before {
             height: 100%;
           }
         }
       }
     }
-    a{
+    a {
       font-style: italic;
       color: $textColor;
       text-decoration: none;
       position: relative;
       z-index: 1;
-      &::before{
-        content: '';
+      &::before {
+        content: "";
         position: absolute;
         left: 0;
         bottom: 0;
@@ -136,8 +138,8 @@ nav{
         display: block;
         transition: height 150ms linear;
       }
-      &:hover{
-        &::before{
+      &:hover {
+        &::before {
           height: 100%;
         }
       }
@@ -145,21 +147,21 @@ nav{
   }
 }
 
-.projects{
+.projects {
   max-width: 50%;
   margin: 0 auto;
   padding: 35px 0;
-  &__more{
+  &__more {
     text-align: center;
     padding: 50px 0;
     display: block;
-    a{
+    a {
       text-decoration: none;
       color: $textColor;
       position: relative;
       z-index: 1;
-      &::before{
-        content: '';
+      &::before {
+        content: "";
         position: absolute;
         width: 100%;
         height: 3px;
@@ -170,53 +172,53 @@ nav{
         z-index: -1;
         display: block;
       }
-      &:hover{
-        &::before{
+      &:hover {
+        &::before {
           height: 100%;
         }
       }
     }
   }
-  &__heading{
+  &__heading {
     display: flex;
     flex-direction: row;
     align-items: center;
-    &-title{
+    &-title {
       color: $textColor;
       font-size: 2em;
     }
-    &-img{
+    &-img {
       width: 45px;
       height: auto;
       margin-left: 15px;
       animation: pulse 1200ms infinite;
     }
   }
-  &__list{
-    &-single{
+  &__list {
+    &-single {
       margin: 25px 0;
-      &-title{
+      &-title {
         color: $textColor;
         font-size: 1.5em;
         margin: 0 0 15px 0;
       }
-      &-desc{
+      &-desc {
         max-width: 80%;
         line-height: 1.8;
         font-size: 1em;
         color: $textColor;
-        span{
+        span {
           font-style: italic;
         }
       }
-      &-link{
+      &-link {
         color: $textColor;
         font-style: italic;
         text-decoration: none;
         position: relative;
         z-index: 1;
-        &::before{
-          content: '';
+        &::before {
+          content: "";
           width: 100%;
           height: 3px;
           background-color: $highlight;
@@ -226,8 +228,8 @@ nav{
           transition: height 150ms linear;
           z-index: -1;
         }
-        &:hover{
-          &:before{
+        &:hover {
+          &:before {
             height: 100%;
           }
         }
@@ -236,11 +238,11 @@ nav{
   }
 }
 
-.active{
-  position: relative!important;
-  color: $highlight!important;
-  &::before{
-    content: '';
+.active {
+  position: relative !important;
+  color: $highlight !important;
+  &::before {
+    content: "";
     border-top: 1px solid $highlight;
     border-right: 1px solid $highlight;
     width: 10px;
@@ -248,12 +250,12 @@ nav{
     position: absolute;
     top: -2.5px;
     right: -10px;
-    transform: scale(1) translate(0, 0)!important;
-    opacity: 1!important;
-    transition: all 500ms cubic-bezier(.75,-0.5,0,1.75);
+    transform: scale(1) translate(0, 0) !important;
+    opacity: 1 !important;
+    transition: all 500ms cubic-bezier(0.75, -0.5, 0, 1.75);
   }
-  &::after{
-    content: '';
+  &::after {
+    content: "";
     border-bottom: 1px solid $highlight;
     border-left: 1px solid $highlight;
     width: 10px;
@@ -261,56 +263,62 @@ nav{
     position: absolute;
     bottom: -2.5px;
     left: -10px;
-    transform: scale(1) translate(0, 0)!important;
-    opacity: 1!important;
-    transition: all 500ms cubic-bezier(.75,-0.5,0,1.75);
+    transform: scale(1) translate(0, 0) !important;
+    opacity: 1 !important;
+    transition: all 500ms cubic-bezier(0.75, -0.5, 0, 1.75);
   }
 }
 
 @keyframes wave {
-  0%{
-    transform: rotate(0deg)
-  }25%{
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
     transform: rotate(60deg);
-  }50%{
-    transform: rotate(0deg)
-  }75%{
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
     transform: rotate(60deg);
-  }100%{
+  }
+  100% {
     transform: rotate(0deg);
   }
 }
 
-@keyframes pulse{
-  0%{
+@keyframes pulse {
+  0% {
     transform: scale(1);
-  }50%{
+  }
+  50% {
     transform: scale(1.2);
-  }100%{
+  }
+  100% {
     transform: scale(1);
   }
 }
 
-
-@media screen and (max-width: 992px){
-  .projects__list-single-desc{
+@media screen and (max-width: 992px) {
+  .projects__list-single-desc {
     max-width: 100%;
   }
 }
 
-@media screen and (max-width: 768px){
-  .navbar{
-    justify-content: center!important;
+@media screen and (max-width: 768px) {
+  .navbar {
+    justify-content: center !important;
   }
-  .intro, .projects{
+  .intro,
+  .projects {
     max-width: 90%;
     padding: 25px 0;
   }
-  .projects__heading{
-    &-img{
+  .projects__heading {
+    &-img {
       width: 35px;
     }
-    &-title{
+    &-title {
       font-size: 1.5em;
     }
   }
